@@ -3,11 +3,11 @@ defmodule FreelancerRates do
   @bilable_days 22
 
   def converting_integer_numbers_to_float(number) do
-      number / 1
+    number / 1
   end
 
   def daily_rate(hourly_rate) do
-    hourly_rate * @daily_rate |> converting_integer_numbers_to_float()
+    (hourly_rate * @daily_rate) |> converting_integer_numbers_to_float()
   end
 
   def apply_discount(price, discount) do
