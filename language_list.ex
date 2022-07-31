@@ -24,11 +24,13 @@ defmodule LanguageList do
   end
 
   def first(list) do
-    list |> List.first()
+    [tail | _head] = list
+    tail
   end
 
   def remove(list) do
-    list |> List.delete(list |> first())
+    [tail | head] = list
+    head
   end
 
   def count(list) do
